@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+    id 'org.openjfx.javafxplugin' version '0.0.9'
+}
+
+group 'martins.marcelo'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven {
+        url "http://maven.jzy3d.org/releases"
+    }
+}
+
+dependencies {
+    implementation 'org.jzy3d:jzy3d-javafx:1.0.2'
+    compileOnly 'org.projectlombok:lombok:1.18.16'
+    compileOnly 'org.apache.commons:commons-configuration2:2.7'
+    annotationProcessor 'org.projectlombok:lombok:1.18.16'
+
+    testCompileOnly 'org.projectlombok:lombok:1.18.16'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.16'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+javafx {
+    version = "15.0.1"
+    modules = [ 'javafx.controls', 'javafx.swing' ]
+}
