@@ -94,7 +94,7 @@ public class NeuralNetworkTest {
     }
 
     @Test
-    @DisplayName("should train and calculate guesses for an XOR problem")
+    @DisplayName("should train and calculate guesses for a XOR problem")
     void xor() {
         // given
         NeuralNetwork nn = new NeuralNetwork(2, 2, 1);
